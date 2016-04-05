@@ -34,5 +34,9 @@
     $conn->close();
     ?>
 </p>
+
+<p>
+    <a href="unos.php">Unos novog automobila</a>
+</p>
 </body>
 </html>
