@@ -19,12 +19,14 @@
     if ($result->num_rows > 0) {
         // output data of each row
         echo('<table>');
+        echo('<tr><th>Registracija</th><th>Ime</th></tr>');
         while($row = $result->fetch_assoc()) {
             echo('<tr>');
             //echo "id: " . $row["id"]. " - registracija: " . $row["registracija"]. " -> " . $row["ime"]. "<br>";
-            echo('<td>' . $row['id'] . '</td>');
             echo('<td>' . $row['registracija'] . '</td>');
             echo('<td>' . $row['ime'] . '</td>');
+            echo('<td>' . '<a href="delete.php?id=' . $row['id'] . '"><img src="img/delete.gif"></a>' . '</td>');
+            echo('<td>' . '<a href="edit.php?id=' . $row['id'] . '"><img src="img/edit.gif"></a>' . '</td>');
             echo('</tr>');
         }
         echo('</table>');
