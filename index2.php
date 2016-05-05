@@ -1,3 +1,4 @@
+<?php require ('check.php')?>
 <?php session_start(); ?>
 <?php require('db.php'); ?>
 <!DOCTYPE html>
